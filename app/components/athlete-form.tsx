@@ -17,7 +17,7 @@ interface FormInputType {
 }
 
 export const AthleteForm = () => {
-  const { register, handleSubmit } = useForm<FormInputType>();
+  const { register, handleSubmit, reset } = useForm<FormInputType>();
 
   //   const onSubmit: SubmitHandler<FormInputType> = (data: FormInputType) =>
   //     console.log(data);
@@ -27,6 +27,7 @@ export const AthleteForm = () => {
   ) => {
     try {
       await generateContract(data);
+      reset();
     } catch (error) {
       console.error("Error generating contract:", error);
     }
@@ -76,7 +77,9 @@ export const AthleteForm = () => {
           </div>
 
           <div className="inputContainerStyles">
-            <label className="font-medium">Contract Duration</label>
+            <label className="font-medium">
+              Contract Duration (in months){" "}
+            </label>
             <input
               {...register("duration", { required: true })}
               className="w-full p-2 border rounded-md"
