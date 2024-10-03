@@ -14,11 +14,14 @@ interface FormInputType {
   "base-salary": number;
   "signing-bonus": number | undefined;
 }
+
 export const AthleteForm = () => {
   const { register, handleSubmit } = useForm<FormInputType>();
 
   const onSubmit: SubmitHandler<FormInputType> = (data: FormInputType) =>
     console.log(data);
+
+  const inputContainerStyles = "grid grid-cols-[200px_1fr] items-center gap-4";
 
   return (
     <div className="border-red-500 flex flex-row ">
@@ -28,7 +31,7 @@ export const AthleteForm = () => {
             Athlete Information
           </h2>
 
-          <div className="grid grid-cols-[200px_1fr] items-center gap-4">
+          <div className="inputContainerStyles">
             <label className="font-medium">Athlete name</label>
             <input
               {...register("name", { required: true })}
@@ -36,7 +39,7 @@ export const AthleteForm = () => {
             />
           </div>
 
-          <div className="grid grid-cols-[200px_1fr] items-center gap-4">
+          <div className="inputContainerStyles">
             <label className="font-medium">Age</label>
             <input
               type="number"
@@ -45,7 +48,7 @@ export const AthleteForm = () => {
             />
           </div>
 
-          <div className="grid grid-cols-[200px_1fr] items-center gap-4">
+          <div className="inputContainerStyles">
             <label className="font-medium">Sport</label>
             <input
               {...register("sport", { required: true })}
@@ -53,7 +56,7 @@ export const AthleteForm = () => {
             />
           </div>
 
-          <div className="grid grid-cols-[200px_1fr] items-center gap-4">
+          <div className="inputContainerStyles">
             <label className="font-medium">Nationality</label>
             <input
               {...register("nationality", { required: true })}
@@ -61,7 +64,7 @@ export const AthleteForm = () => {
             />
           </div>
 
-          <div className="grid grid-cols-[200px_1fr] items-center gap-4">
+          <div className="inputContainerStyles">
             <label className="font-medium">Contract Duration</label>
             <input
               {...register("duration", { required: true })}
@@ -69,7 +72,7 @@ export const AthleteForm = () => {
             />
           </div>
 
-          <div className="grid grid-cols-[200px_1fr] items-center gap-4">
+          <div className="inputContainerStyles">
             <label className="font-medium">Start Date</label>
             <input
               type="date"
@@ -78,7 +81,7 @@ export const AthleteForm = () => {
             />
           </div>
 
-          <div className="grid grid-cols-[200px_1fr] items-center gap-4">
+          <div className="inputContainerStyles">
             <label className="font-medium">End Date</label>
             <input
               type="date"
@@ -91,7 +94,7 @@ export const AthleteForm = () => {
         <div className="space-y-6">
           <h2 className="text-2xl font-semibold border-b pb-2">Financials</h2>
 
-          <div className="grid grid-cols-[200px_1fr] items-center gap-4">
+          <div className="inputContainerStyles">
             <label className="font-medium">Base salary</label>
             <input
               type="number"
@@ -100,7 +103,7 @@ export const AthleteForm = () => {
             />
           </div>
 
-          <div className="grid grid-cols-[200px_1fr] items-center gap-4">
+          <div className={inputContainerStyles}>
             <label className="font-medium">Signing bonus</label>
             <input
               type="number"
