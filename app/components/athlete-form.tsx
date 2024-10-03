@@ -2,6 +2,7 @@
 
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { generateContract } from "../utils/document-generator";
 
 interface FormInputType {
   name: string;
@@ -18,8 +19,18 @@ interface FormInputType {
 export const AthleteForm = () => {
   const { register, handleSubmit } = useForm<FormInputType>();
 
-  const onSubmit: SubmitHandler<FormInputType> = (data: FormInputType) =>
-    console.log(data);
+  //   const onSubmit: SubmitHandler<FormInputType> = (data: FormInputType) =>
+  //     console.log(data);
+
+  const onSubmit: SubmitHandler<FormInputType> = async (
+    data: FormInputType
+  ) => {
+    try {
+      await generateContract(data);
+    } catch (error) {
+      console.error("Error generating contract:", error);
+    }
+  };
 
   const inputContainerStyles = "grid grid-cols-[200px_1fr] items-center gap-4";
 
