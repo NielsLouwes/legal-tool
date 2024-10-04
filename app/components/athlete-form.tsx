@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { generateContract } from "../utils/document-generator";
 
@@ -16,11 +16,12 @@ interface FormInputType {
   "signing-bonus": number | undefined;
 }
 
-export const AthleteForm = () => {
+export const AthleteForm = ({
+  setFormActive,
+}: {
+  setFormActive: Dispatch<SetStateAction<boolean>>;
+}) => {
   const { register, handleSubmit, reset } = useForm<FormInputType>();
-
-  //   const onSubmit: SubmitHandler<FormInputType> = (data: FormInputType) =>
-  //     console.log(data);
 
   const onSubmit: SubmitHandler<FormInputType> = async (
     data: FormInputType
@@ -28,12 +29,14 @@ export const AthleteForm = () => {
     try {
       await generateContract(data);
       reset();
+      setFormActive(false);
     } catch (error) {
       console.error("Error generating contract:", error);
     }
   };
 
   const inputContainerStyles = "grid grid-cols-[200px_1fr] items-center gap-4";
+  const inputStyles = "w-full p-2 border rounded-md";
 
   return (
     <div className="border-red-500 flex flex-row ">
@@ -47,7 +50,7 @@ export const AthleteForm = () => {
             <label className="font-medium">Athlete name</label>
             <input
               {...register("name", { required: true })}
-              className="w-full p-2 border rounded-md"
+              className={inputStyles}
             />
           </div>
 
@@ -56,7 +59,7 @@ export const AthleteForm = () => {
             <input
               type="number"
               {...register("age", { required: true })}
-              className="w-full p-2 border rounded-md"
+              className={inputStyles}
             />
           </div>
 
@@ -64,7 +67,7 @@ export const AthleteForm = () => {
             <label className="font-medium">Sport</label>
             <input
               {...register("sport", { required: true })}
-              className="w-full p-2 border rounded-md"
+              className={inputStyles}
             />
           </div>
 
@@ -72,7 +75,7 @@ export const AthleteForm = () => {
             <label className="font-medium">Nationality</label>
             <input
               {...register("nationality", { required: true })}
-              className="w-full p-2 border rounded-md"
+              className={inputStyles}
             />
           </div>
 
@@ -82,7 +85,7 @@ export const AthleteForm = () => {
             </label>
             <input
               {...register("duration", { required: true })}
-              className="w-full p-2 border rounded-md"
+              className={inputStyles}
             />
           </div>
 
@@ -91,7 +94,7 @@ export const AthleteForm = () => {
             <input
               type="date"
               {...register("start-date", { required: true })}
-              className="w-full p-2 border rounded-md"
+              className={inputStyles}
             />
           </div>
 
@@ -100,7 +103,7 @@ export const AthleteForm = () => {
             <input
               type="date"
               {...register("end-date", { required: true })}
-              className="w-full p-2 border rounded-md"
+              className={inputStyles}
             />
           </div>
         </div>
@@ -113,7 +116,7 @@ export const AthleteForm = () => {
             <input
               type="number"
               {...register("base-salary", { required: true })}
-              className="w-full p-2 border rounded-md"
+              className={inputStyles}
             />
           </div>
 
@@ -122,7 +125,7 @@ export const AthleteForm = () => {
             <input
               type="number"
               {...register("signing-bonus", { required: false })}
-              className="w-full p-2 border rounded-md"
+              className={inputStyles}
             />
           </div>
         </div>
