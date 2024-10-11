@@ -18,6 +18,7 @@ interface FormInputType {
   postalCode: string;
   city: string;
   streetAddress: string;
+  gender: string;
 }
 
 export const AthleteForm = ({
@@ -75,6 +76,17 @@ export const AthleteForm = ({
               {...register("nationality", { required: true })}
               className={inputStyles}
             />
+          </div>
+
+          <div className="inputContainerStyles">
+            <label className="font-medium">Gender</label>
+            <select
+              {...register("gender", { required: true })}
+              className={inputStyles}
+            >
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
           </div>
 
           <h2 className="text-2xl font-semibold border-b pb-2">Location</h2>

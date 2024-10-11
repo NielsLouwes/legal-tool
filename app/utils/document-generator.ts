@@ -25,7 +25,13 @@ interface AthleteFormData {
   postalCode: string;
   city: string;
   streetAddress: string;
+  gender: string;
 }
+
+const prepareContractGender = (gender: string) => {
+  if (gender === "male") return "Men's";
+  return "Women's";
+};
 
 export async function generateContract(data: AthleteFormData) {
   const doc = new Document({
@@ -214,5 +220,10 @@ export async function generateContract(data: AthleteFormData) {
 
   // Generate and save document
   const blob = await Packer.toBlob(doc);
-  saveAs(blob, `${data.name}- ${data.sport} contract.docx`);
+  saveAs(
+    blob,
+    `${prepareContractGender(data.gender)} ${data.nationality} ${
+      data.sport
+    } contract - ${data.name}.docx`
+  );
 }

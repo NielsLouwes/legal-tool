@@ -40,3 +40,7 @@ export default function Home() {
     </div>
   );
 }
+
+// men's german football contract - name in filename (ask for nationality include in filename, get gender from form)
+// nationality drop down menu
+// contarct type adult and minor
