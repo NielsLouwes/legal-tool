@@ -3,6 +3,8 @@
 import React, { Dispatch, SetStateAction } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { generateContract } from "../utils/document-generator";
+import { nationalities } from "../data/nationalities";
+import { useRouter } from "next/navigation";
 
 interface FormInputType {
   name: string;
@@ -29,6 +31,7 @@ export const AthleteForm = ({
   sport: string;
 }) => {
   const { register, handleSubmit, reset } = useForm<FormInputType>();
+  const router = useRouter();
 
   const onSubmit: SubmitHandler<FormInputType> = async (
     data: FormInputType
@@ -37,6 +40,7 @@ export const AthleteForm = ({
       await generateContract(data);
       reset();
       setFormActive(false);
+      router.push("/");
     } catch (error) {
       console.error("Error generating contract:", error);
     }
@@ -71,11 +75,17 @@ export const AthleteForm = ({
           </div>
 
           <div className="inputContainerStyles">
-            <label className="font-medium">Nationality</label>
-            <input
+            <label className="font-medium pr-8">Nationality</label>
+            <select
               {...register("nationality", { required: true })}
               className={inputStyles}
-            />
+            >
+              {nationalities.map((nat, index) => (
+                <option value={nat} key={index}>
+                  {nat}
+                </option>
+              ))}
+            </select>
           </div>
 
           <div className="inputContainerStyles">

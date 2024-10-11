@@ -222,8 +222,8 @@ export async function generateContract(data: AthleteFormData) {
   const blob = await Packer.toBlob(doc);
   saveAs(
     blob,
-    `${prepareContractGender(data.gender)} ${data.nationality} ${
+    `${data.name} - ${prepareContractGender(data.gender)} ${data.nationality} ${
       data.sport
-    } contract - ${data.name}.docx`
+    } Contract - .docx`
   );
 }
