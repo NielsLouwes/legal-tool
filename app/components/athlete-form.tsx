@@ -14,12 +14,18 @@ interface FormInputType {
   "end-date": Date;
   "base-salary": number;
   "signing-bonus": number | undefined;
+  country: string;
+  postalCode: string;
+  city: string;
+  streetAddress: string;
 }
 
 export const AthleteForm = ({
   setFormActive,
+  sport,
 }: {
   setFormActive: Dispatch<SetStateAction<boolean>>;
+  sport: string;
 }) => {
   const { register, handleSubmit, reset } = useForm<FormInputType>();
 
@@ -64,17 +70,58 @@ export const AthleteForm = ({
           </div>
 
           <div className="inputContainerStyles">
-            <label className="font-medium">Sport</label>
+            <label className="font-medium">Nationality</label>
             <input
-              {...register("sport", { required: true })}
+              {...register("nationality", { required: true })}
+              className={inputStyles}
+            />
+          </div>
+
+          <h2 className="text-2xl font-semibold border-b pb-2">Location</h2>
+
+          <div className="flex flex-row gap-4">
+            <div className="inputContainerStyles">
+              <label className="font-medium">Country</label>
+              <input
+                {...register("country", { required: true })}
+                className={inputStyles}
+              />
+            </div>
+          </div>
+
+          <div className="inputContainerStyles">
+            <label className="font-medium">Postal Code</label>
+            <input
+              {...register("postalCode", { required: true })}
               className={inputStyles}
             />
           </div>
 
           <div className="inputContainerStyles">
-            <label className="font-medium">Nationality</label>
+            <label className="font-medium">City</label>
             <input
-              {...register("nationality", { required: true })}
+              {...register("city", { required: true })}
+              className={inputStyles}
+            />
+          </div>
+
+          <div className="inputContainerStyles">
+            <label className="font-medium">Street Address</label>
+            <input
+              {...register("streetAddress", { required: true })}
+              className={inputStyles}
+            />
+          </div>
+
+          <h2 className="text-2xl font-semibold border-b pb-2">
+            Contract Information
+          </h2>
+
+          <div className="inputContainerStyles">
+            <label className="font-medium">Sport</label>
+            <input
+              defaultValue={sport}
+              {...register("sport", { required: true })}
               className={inputStyles}
             />
           </div>

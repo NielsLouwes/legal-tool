@@ -21,6 +21,10 @@ interface AthleteFormData {
   "end-date": Date;
   "base-salary": number;
   "signing-bonus": number | undefined;
+  country: string;
+  postalCode: string;
+  city: string;
+  streetAddress: string;
 }
 
 export async function generateContract(data: AthleteFormData) {
@@ -48,7 +52,7 @@ export async function generateContract(data: AthleteFormData) {
                 bold: true,
               }),
               new TextRun({
-                text: ` (hereinafter referred to as the "Athlete") and [Team Name] (hereinafter referred to as the "Team").`,
+                text: ` (hereinafter referred to as the "Athlete"), who's legal residence is at ${data.city}, ${data.country}, ${data.postalCode}, ${data.streetAddress} and Nike Inc. (hereinafter referred to as the "Organisation").`,
               }),
             ],
             spacing: {
@@ -210,5 +214,5 @@ export async function generateContract(data: AthleteFormData) {
 
   // Generate and save document
   const blob = await Packer.toBlob(doc);
-  saveAs(blob, `${data.name}-contract.docx`);
+  saveAs(blob, `${data.name}- ${data.sport} contract.docx`);
 }
