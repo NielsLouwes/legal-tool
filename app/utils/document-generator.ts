@@ -26,6 +26,9 @@ interface AthleteFormData {
   city: string;
   streetAddress: string;
   gender: string;
+  "todays-date": Date;
+  place: string;
+  "passport-number": string;
 }
 
 const prepareContractGender = (gender: string) => {
@@ -46,6 +49,30 @@ export async function generateContract(data: AthleteFormData) {
             spacing: {
               after: 200,
             },
+          }),
+
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: `Date : ${new Date().toLocaleDateString()}`,
+              }),
+            ],
+          }),
+
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: `Place : ${data.place}`,
+              }),
+            ],
+          }),
+
+          new Paragraph({
+            children: [
+              new TextRun({
+                text: `Passport number : ${data["passport-number"]}`,
+              }),
+            ],
           }),
 
           new Paragraph({
@@ -83,7 +110,7 @@ export async function generateContract(data: AthleteFormData) {
               }),
               new TextRun(" for the Team for a period of "),
               new TextRun({
-                text: `${data.duration} years`,
+                text: `${data.duration} months`,
                 bold: true,
               }),
               new TextRun(

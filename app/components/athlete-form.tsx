@@ -21,6 +21,9 @@ interface FormInputType {
   city: string;
   streetAddress: string;
   gender: string;
+  "todays-date": Date;
+  place: string;
+  "passport-number": string;
 }
 
 export const AthleteForm = ({
@@ -53,6 +56,24 @@ export const AthleteForm = ({
     <div className="border-red-500 flex flex-row ">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div className="space-y-6">
+          <div className="inputContainerStyles">
+            <label className="font-medium">Todays date</label>
+            <input
+              {...register("todays-date", { required: true })}
+              className={inputStyles}
+              type="date"
+            />
+          </div>
+
+          <div className="inputContainerStyles">
+            <label className="font-medium">Place</label>
+            <input
+              {...register("place", { required: true })}
+              className={inputStyles}
+              type="text"
+            />
+          </div>
+
           <h2 className="text-2xl font-semibold border-b pb-2">
             Athlete Information
           </h2>
@@ -69,7 +90,7 @@ export const AthleteForm = ({
             <label className="font-medium">Age</label>
             <input
               type="number"
-              {...register("age", { required: true })}
+              {...register("age", { required: true, maxLength: 2 })}
               className={inputStyles}
             />
           </div>
@@ -86,6 +107,19 @@ export const AthleteForm = ({
                 </option>
               ))}
             </select>
+          </div>
+
+          <div className="flex flex-row gap-4">
+            <div className="inputContainerStyles">
+              <label className="font-medium">Passport number</label>
+              <input
+                {...register("passport-number", {
+                  required: true,
+                  maxLength: 30,
+                })}
+                className={inputStyles}
+              />
+            </div>
           </div>
 
           <div className="inputContainerStyles">
