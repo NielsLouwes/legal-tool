@@ -62,14 +62,6 @@ export async function generateContract(data: AthleteFormData) {
           new Paragraph({
             children: [
               new TextRun({
-                text: `Place : ${data.place}`,
-              }),
-            ],
-          }),
-
-          new Paragraph({
-            children: [
-              new TextRun({
                 text: `Passport number : ${data["passport-number"]}`,
               }),
             ],
@@ -267,21 +259,21 @@ export async function generateContract(data: AthleteFormData) {
           }),
 
           new Paragraph({
-            text: "participate in all matches, trainings, training camps and meetings scheduled and/or ordered by the coach or Club, incl. perform all instructions of the coach and do his best when participating in a match;",
+            text: "Participate in all matches, trainings, training camps and meetings scheduled and/or ordered by the coach or Club, incl. perform all instructions of the coach and do his best when participating in a match;",
             bullet: {
               level: 0,
             },
           }),
 
           new Paragraph({
-            text: "wear training or match kit issued to the Player at the time established by the Club;",
+            text: "Wear training or match kit issued to the Player at the time established by the Club;",
             bullet: {
               level: 0,
             },
           }),
 
           new Paragraph({
-            text: "maintain a healthy lifestyle and high standard of fitness;",
+            text: "Maintain a healthy lifestyle and high standard of fitness;",
             bullet: {
               level: 0,
             },
@@ -302,21 +294,21 @@ export async function generateContract(data: AthleteFormData) {
           }),
 
           new Paragraph({
-            text: "abstain from participating in other activities related to football and/or other possible dangerous activities which the Club has not previously approved and which the Club has not covered with insurance;",
+            text: "Abstain from participating in other activities related to football and/or other possible dangerous activities which the Club has not previously approved and which the Club has not covered with insurance;",
             bullet: {
               level: 0,
             },
           }),
 
           new Paragraph({
-            text: "undergo regularly medical examination and medical treatment required by the Club, incl. adhere to the provided treatment;",
+            text: "Undergo regularly medical examination and medical treatment required by the Club, incl. adhere to the provided treatment;",
             bullet: {
               level: 0,
             },
           }),
 
           new Paragraph({
-            text: "immediately inform the Club of an accident or illness and not to undergo any medical treatment before the Player has informed the Club´s doctor (except in case of emergencies) and provide a medical certificate in the case of incapacity for work;",
+            text: "Immediately inform the Club of an accident or illness and not to undergo any medical treatment before the Player has informed the Club´s doctor (except in case of emergencies) and provide a medical certificate in the case of incapacity for work;",
             bullet: {
               level: 0,
             },
@@ -330,21 +322,21 @@ export async function generateContract(data: AthleteFormData) {
           }),
 
           new Paragraph({
-            text: "take care of the property of the Club and to return it after termination of the Contract;",
+            text: "Take care of the property of the Club and to return it after termination of the Contract;",
             bullet: {
               level: 0,
             },
           }),
 
           new Paragraph({
-            text: "protect the Club’s reputation in contact with media and football prospects and avoid any declarations which damage the interests of the Club;",
+            text: "Protect the Club’s reputation in contact with media and football prospects and avoid any declarations which damage the interests of the Club;",
             bullet: {
               level: 0,
             },
           }),
 
           new Paragraph({
-            text: "at his initiative and immediately inform the coach or official of the Club of all circumstances which have become known to him and which violate or may significantly violate the interests or reputation of the Club, and immediately notify the coach or official of the Club of all possible circumstances which may influence the preservation and condition of assets handed into the Player’s possession;",
+            text: "At his initiative and immediately inform the coach or official of the Club of all circumstances which have become known to him and which violate or may significantly violate the interests or reputation of the Club, and immediately notify the coach or official of the Club of all possible circumstances which may influence the preservation and condition of assets handed into the Player’s possession;",
             bullet: {
               level: 0,
             },
@@ -379,7 +371,138 @@ export async function generateContract(data: AthleteFormData) {
           }),
 
           new Paragraph({
-            text: "4. COMPENSATION",
+            text: "4. DOPING",
+            heading: HeadingLevel.HEADING_2,
+            style: "bold",
+            spacing: {
+              before: 200,
+              after: 100,
+            },
+          }),
+
+          new Paragraph({
+            text: "The Player and the Club obey to current rules concerning doping. Doping is the use of substances and methods which are in the prohibited list regulated by the EFA Disciplinary Regulation. The parties are aware that the use of doping is forbidden. The Club has the right to terminate the Contract with a Player who has been convicted of the use of doping, based on the principle of viewing each case separately.",
+            bullet: {
+              level: 0,
+            },
+          }),
+
+          new Paragraph({
+            text: "Doping is the use of substances and methods which are in the prohibited list regulated by the EFA Disciplinary Regulation. The parties are aware that the use of doping is forbidden. The Club has the right to terminate the Contract with a Player who has been convicted of the use of doping, based on the principle of viewing each case separately.",
+            bullet: {
+              level: 0,
+            },
+          }),
+
+          new Paragraph({
+            text: "The Club has the right to terminate the Contract with a Player who has been convicted of the use of doping, based on the principle of viewing each case separately.",
+            bullet: {
+              level: 0,
+            },
+          }),
+
+          new Paragraph({
+            text: "5. GAMBLING AND MATCH FIXING",
+            heading: HeadingLevel.HEADING_2,
+            style: "bold",
+            spacing: {
+              before: 200,
+              after: 100,
+            },
+          }),
+
+          new Paragraph({
+            text: "The Player and the Club shall comply all documents of EFA and other international football organisations concerning gambling and match-fixing.",
+            bullet: {
+              level: 0,
+            },
+          }),
+
+          new Paragraph({
+            text: "The parties agree not to take part directly or indirectly for personal gain or the gain of third persons in betting or in similar activities in betting for the result or process of the match at competitions of EFA or organised by EFA, in which their team or the team of a person close to them is taking place. Gain in the meaning of this clause is financial as well as any other gain.",
+            bullet: {
+              level: 0,
+            },
+          }),
+
+          new Paragraph({
+            text: "The parties agree not to influence or attempt to influence directly or indirectly with any direct or indirect activities the course of the match and/or previously fix the result of the match or competition (fixed match result) regardless of whether the goal of the person is to receive personal gain (proprietary or non-proprietary); create the opportunity of gain for a third person or for any reason causing such behaviour. Gain in the meaning of this clause is financial as well as any other gain, incl. non-proprietary gain;",
+            bullet: {
+              level: 0,
+            },
+          }),
+
+          new Paragraph({
+            text: "The Player confirms that he will notify the Club, EFA and/or the police voluntarily and immediately of any proposal made to them to influence the course and/or result of a match or competition (who, where, when and with what proposal approached the Player, etc.), incl. is aware that upon failure to notify, the Player is deemed an accomplice/participant in the offence.",
+            bullet: {
+              level: 0,
+            },
+          }),
+
+          new Paragraph({
+            text: "6. ADVERTISING AND REPRESENTATION RIGHTS",
+            heading: HeadingLevel.HEADING_2,
+            style: "bold",
+            spacing: {
+              before: 200,
+              after: 100,
+            },
+          }),
+
+          new Paragraph({
+            text: "The Player must participate in marketing events established by the Club which have the purpose of promoting and advertising the football Club;",
+            bullet: {
+              level: 0,
+            },
+          }),
+
+          new Paragraph({
+            text: "The Player must wear the outfit established by the Club at advertising events;",
+            bullet: {
+              level: 0,
+            },
+          }),
+
+          new Paragraph({
+            text: "At an event provided in clause 11.1, the Player shall demonstrate his commitment to the Club and to act his best to increase the Club’s reputation.",
+            bullet: {
+              level: 0,
+            },
+          }),
+
+          new Paragraph({
+            text: "The fee for the Players´ participation in an event provided in clause 11.1 is contained in the fee established in clause 5.1 of the Contract, unless the parties agree otherwise.",
+            bullet: {
+              level: 0,
+            },
+          }),
+
+          new Paragraph({
+            text: "The Player grants the Club the right to use and authorise third persons to use photographs of the Player and audiovisual and visual materials prepared for the Player (including the Player’s name, relevant statistics, data and images) together with the Club’s name, badge and Player shirt (incl. advertisements of shirt sponsors and equipment manufacturers) for non-commercial purposes for promoting football and other reasonable purposes established by the Club free of charge.",
+            bullet: {
+              level: 0,
+            },
+          }),
+
+          new Paragraph({
+            text: "The Player must not conclude an individual advertising Contract or participate as a Player in an advertising event without the mediation or written consent of the Club.",
+            bullet: {
+              level: 0,
+            },
+          }),
+
+          new Paragraph({
+            text: "7. EXPIRY, SUSPENSION AND TERMINATION OF THE CONTRACT",
+            heading: HeadingLevel.HEADING_2,
+            style: "bold",
+            spacing: {
+              before: 200,
+              after: 100,
+            },
+          }),
+
+          new Paragraph({
+            text: "8. COMPENSATION",
             heading: HeadingLevel.HEADING_2,
             style: "bold",
             spacing: {
