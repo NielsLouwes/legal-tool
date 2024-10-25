@@ -76,8 +76,6 @@ export async function generateContract(data: AthleteFormData) {
             },
           }),
 
-          // athlete name, nationality, document number
-
           new Paragraph({
             text: `Name : ${data.name}`,
             spacing: {
@@ -101,8 +99,6 @@ export async function generateContract(data: AthleteFormData) {
               after: 100,
             },
           }),
-
-          // fix this part
 
           new Paragraph({
             children: [
@@ -273,7 +269,7 @@ export async function generateContract(data: AthleteFormData) {
           }),
 
           new Paragraph({
-            text: "adhere to Statutes of association, regulations, directives of EFA, FIFA and UEFA and decisions adopted on their basis and in conformity with them. The Player is aware that documents which regulate football may amended from time to time.",
+            text: "adhere to Statutes of association, regulations, directives of EFA, FIFA and UEFA and decisions adopted on their basis and in conformity with them. The Athlete is aware that documents which regulate football may amended from time to time.",
             bullet: {
               level: 0,
             },
@@ -290,21 +286,21 @@ export async function generateContract(data: AthleteFormData) {
           }),
 
           new Paragraph({
-            text: "The Player and the Club obey to current rules concerning doping. Doping is the use of substances and methods which are in the prohibited list regulated by the EFA Disciplinary Regulation. The parties are aware that the use of doping is forbidden. The Club has the right to terminate the Contract with a Player who has been convicted of the use of doping, based on the principle of viewing each case separately.",
+            text: "The Athlete obeys the current rules concerning doping. Doping is the use of substances and methods which are in the prohibited list regulated by the EFA Disciplinary Regulation. The parties are aware that the use of doping is forbidden. The Club has the right to terminate the Contract with a Athlete who has been convicted of the use of doping, based on the principle of viewing each case separately.",
             bullet: {
               level: 0,
             },
           }),
 
           new Paragraph({
-            text: "Doping is the use of substances and methods which are in the prohibited list regulated by the EFA Disciplinary Regulation. The parties are aware that the use of doping is forbidden. The Club has the right to terminate the Contract with a Player who has been convicted of the use of doping, based on the principle of viewing each case separately.",
+            text: "Doping is the use of substances and methods which are in the prohibited list regulated by the EFA Disciplinary Regulation. The parties are aware that the use of doping is forbidden. The Organisation has the right to terminate the Contract with a Athlete who has been convicted of the use of doping, based on the principle of viewing each case separately.",
             bullet: {
               level: 0,
             },
           }),
 
           new Paragraph({
-            text: "The Club has the right to terminate the Contract with a Player who has been convicted of the use of doping, based on the principle of viewing each case separately.",
+            text: "The Organisation has the right to terminate the Contract with a Athlete who has been convicted of the use of doping, based on the principle of viewing each case separately.",
             bullet: {
               level: 0,
             },
@@ -321,7 +317,7 @@ export async function generateContract(data: AthleteFormData) {
           }),
 
           new Paragraph({
-            text: "The Player and the Club shall comply all documents of EFA and other international football organisations concerning gambling and match-fixing.",
+            text: "The Athlete shall comply all documents of EFA and other international football organisations concerning gambling and match-fixing.",
             bullet: {
               level: 0,
             },
@@ -342,7 +338,7 @@ export async function generateContract(data: AthleteFormData) {
           }),
 
           new Paragraph({
-            text: "The Player confirms that he will notify the Club, EFA and/or the police voluntarily and immediately of any proposal made to them to influence the course and/or result of a match or competition (who, where, when and with what proposal approached the Player, etc.), incl. is aware that upon failure to notify, the Player is deemed an accomplice/participant in the offence.",
+            text: "The Athlete confirms that he will notify the Club, EFA and/or the police voluntarily and immediately of any proposal made to them to influence the course and/or result of a match or competition (who, where, when and with what proposal approached the Athlete, etc.), incl. is aware that upon failure to notify, the Athlete is deemed an accomplice/participant in the offence.",
             bullet: {
               level: 0,
             },
@@ -359,42 +355,42 @@ export async function generateContract(data: AthleteFormData) {
           }),
 
           new Paragraph({
-            text: "The Player must participate in marketing events established by the Club which have the purpose of promoting and advertising the football Club;",
+            text: "The Athlete must participate in marketing events established by the Organisation which have the purpose of promoting and advertising the Organisation;",
             bullet: {
               level: 0,
             },
           }),
 
           new Paragraph({
-            text: "The Player must wear the outfit established by the Club at advertising events;",
+            text: "The Athlete must wear the outfit established by the Organisation at advertising events;",
             bullet: {
               level: 0,
             },
           }),
 
           new Paragraph({
-            text: "At an event provided in clause 11.1, the Player shall demonstrate his commitment to the Club and to act his best to increase the Club’s reputation.",
+            text: "At an event provided in clause 11.1, the Athlete shall demonstrate his commitment to the Organisation and to act his best to increase the Organisation’s reputation.",
             bullet: {
               level: 0,
             },
           }),
 
           new Paragraph({
-            text: "The fee for the Players´ participation in an event provided in clause 11.1 is contained in the fee established in clause 5.1 of the Contract, unless the parties agree otherwise.",
+            text: "The fee for the Athletes´ participation in an event provided in clause 11.1 is contained in the fee established in clause 5.1 of the Contract, unless the parties agree otherwise.",
             bullet: {
               level: 0,
             },
           }),
 
           new Paragraph({
-            text: "The Player grants the Club the right to use and authorise third persons to use photographs of the Player and audiovisual and visual materials prepared for the Player (including the Player’s name, relevant statistics, data and images) together with the Club’s name, badge and Player shirt (incl. advertisements of shirt sponsors and equipment manufacturers) for non-commercial purposes for promoting football and other reasonable purposes established by the Club free of charge.",
+            text: "The Athlete grants the Organisation the right to use and authorise third persons to use photographs of the Athlete and audiovisual and visual materials prepared for the Athlete (including the Athlete’s name, relevant statistics, data and images) together with the Organisation’s name, badge and Athlete shirt (incl. advertisements of shirt sponsors and equipment manufacturers) for non-commercial purposes for promoting football and other reasonable purposes established by the Organisation free of charge.",
             bullet: {
               level: 0,
             },
           }),
 
           new Paragraph({
-            text: "The Player must not conclude an individual advertising Contract or participate as a Player in an advertising event without the mediation or written consent of the Club.",
+            text: "The Athlete must not conclude an individual advertising Contract or participate as a Athlete in an advertising event without the mediation or written consent of the Organisation.",
             bullet: {
               level: 0,
             },
@@ -407,6 +403,20 @@ export async function generateContract(data: AthleteFormData) {
             spacing: {
               before: 200,
               after: 100,
+            },
+          }),
+
+          new Paragraph({
+            text: "The Contract will expire on the date specified in clause 1.1 of the Contract.",
+            bullet: {
+              level: 0,
+            },
+          }),
+
+          new Paragraph({
+            text: "The Contract will be terminated by the Organisation if the Athlete is convicted of a criminal offence, or is violation of the various chapters laid out in the Contract.",
+            bullet: {
+              level: 0,
             },
           }),
 
