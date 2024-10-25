@@ -107,7 +107,7 @@ export async function generateContract(data: AthleteFormData) {
           new Paragraph({
             children: [
               new TextRun({
-                text: `THIS AGREEMENT is made on ${new Date().toLocaleDateString()} between `,
+                text: `THIS SPONSORSHIP AGREEMENT is made on ${new Date().toLocaleDateString()} between `,
               }),
               new TextRun({
                 text: data.name,
@@ -132,12 +132,12 @@ export async function generateContract(data: AthleteFormData) {
           }),
           new Paragraph({
             children: [
-              new TextRun("The Athlete agrees to play "),
+              new TextRun("The Athlete agrees wear and use Nike products"),
               new TextRun({
                 text: data.sport,
                 bold: true,
               }),
-              new TextRun(" for the Team for a period of "),
+              new TextRun(" for a period of "),
               new TextRun({
                 text: `${data.duration} months`,
                 bold: true,
@@ -156,7 +156,7 @@ export async function generateContract(data: AthleteFormData) {
           }),
 
           new Paragraph({
-            text: "2. DUTIES AND OBLIGATIONS OF THE CLUB",
+            text: "2. DUTIES AND OBLIGATIONS OF THE ORGANIZATION",
             heading: HeadingLevel.HEADING_2,
             style: "bold",
             spacing: {
@@ -166,7 +166,7 @@ export async function generateContract(data: AthleteFormData) {
           }),
 
           new Paragraph({
-            text: "2.1. The Club is obligated to ",
+            text: "2.1. The Organization is obligated to ",
             heading: HeadingLevel.HEADING_3,
             style: "bold",
             spacing: {
@@ -176,63 +176,35 @@ export async function generateContract(data: AthleteFormData) {
           }),
 
           new Paragraph({
-            text: "pay the Player wages and other fees pursuant to clause 5 of the Contract, incl. during a period of representing the national team;",
+            text: "Pay the Athlete wages and other fees pursuant to clause 5 of the Contract",
             bullet: {
               level: 0,
             },
           }),
 
           new Paragraph({
-            text: "insure the Player against accidents pursuant to clause 5 of the Contract;",
+            text: "Supply the Athlete with products and equipment essential to their performance and promotional duties, like apparel, footwear, and accessories, ensuring a steady supply throughout the contract period.",
             bullet: {
               level: 0,
             },
           }),
 
           new Paragraph({
-            text: "keep a record of the Player’s injuries (incl. injuries received in the national team) and process data as confidential. The Club appoints a responsible person for keeping records of the Player’s injuries;",
+            text: "Adhere to provisions of protecting human rights (incl. taking into account the Athlete’s rights to express themselves freely) and avoid discrimination of the Athlete;",
             bullet: {
               level: 0,
             },
           }),
 
           new Paragraph({
-            text: "adhere to provisions of protecting human rights (incl. taking into account the Player’s rights to express themselves freely) and avoid discrimination of the Player;",
+            text: "In the case of a Contract concluded with a youth Athlete, ensure their right to continue education unrelated to football;",
             bullet: {
               level: 0,
             },
           }),
 
           new Paragraph({
-            text: "in the case of a Contract concluded with a youth Player, ensure his right to continue education unrelated to football;",
-            bullet: {
-              level: 0,
-            },
-          }),
-
-          new Paragraph({
-            text: "upon mutual agreement, enable the Player to prepare for career following football-related activities in the form of acquiring a profession;",
-            bullet: {
-              level: 0,
-            },
-          }),
-
-          new Paragraph({
-            text: "if possible, commence negotiations and make its best efforts to facilitate transfer of the Player to another football Club if this promotes the Player’s career as a football Player and conforms to the Club’s interests;",
-            bullet: {
-              level: 0,
-            },
-          }),
-
-          new Paragraph({
-            text: "establish written internal rules of the Club (which includes work procedures, occupational health and safety rules, disciplinary rules with sanctions, etc.) and introduce these to the Player in an understandable manner before signing the Contract. The rules must regulate the terms and conditions for the mandatory health and accident insurance of the Player and conducting regular health inspections by qualified staff. Occupational health and safety rules must also describe risk assessment, preventive measures, as well as providing information and consulting, the Player’s participation in trainings, prevention of using doping, etc.;",
-            bullet: {
-              level: 0,
-            },
-          }),
-
-          new Paragraph({
-            text: "adhere to Statutes of association, regulations, directives of EFA, FIFA and UEFA and decisions adopted on their basis and in conformity with them. The Club is aware that documents which regulate football may amended from time to time.",
+            text: "Provide replacements for lost or damaged products when deemed appropriate.",
             bullet: {
               level: 0,
             },
@@ -259,14 +231,21 @@ export async function generateContract(data: AthleteFormData) {
           }),
 
           new Paragraph({
-            text: "Participate in all matches, trainings, training camps and meetings scheduled and/or ordered by the coach or Club, incl. perform all instructions of the coach and do his best when participating in a match;",
+            text: "Participate in the agreed upon  matches, trainings, training camps and meetings scheduled and/or ordered by the coach or Club, incl. perform all instructions of the coach and do his best when participating in a match;",
             bullet: {
               level: 0,
             },
           }),
 
           new Paragraph({
-            text: "Wear training or match kit issued to the Player at the time established by the Club;",
+            text: "Wear the subscribed Nike apparel, footwear, and accessories during the contract period, and use these products in a respectful manner.",
+            bullet: {
+              level: 0,
+            },
+          }),
+
+          new Paragraph({
+            text: "Provide consulting services to the Organization, including but not limited to promoting Nike products and services to the public and providing feedback on Nike products and services.",
             bullet: {
               level: 0,
             },
@@ -280,13 +259,6 @@ export async function generateContract(data: AthleteFormData) {
           }),
 
           new Paragraph({
-            text: "obey work procedure documents approved by the Club and introduced to the Player against signature, incl. but not limited to, disciplinary rules and the declaration of tolerance;",
-            bullet: {
-              level: 0,
-            },
-          }),
-
-          new Paragraph({
             text: "behave in a sporting manner towards people involved in matches and trainings, learn, observe and follow the Laws of the Game, adhere to and accept decisions of officials involved in the match;",
             bullet: {
               level: 0,
@@ -294,70 +266,7 @@ export async function generateContract(data: AthleteFormData) {
           }),
 
           new Paragraph({
-            text: "Abstain from participating in other activities related to football and/or other possible dangerous activities which the Club has not previously approved and which the Club has not covered with insurance;",
-            bullet: {
-              level: 0,
-            },
-          }),
-
-          new Paragraph({
-            text: "Undergo regularly medical examination and medical treatment required by the Club, incl. adhere to the provided treatment;",
-            bullet: {
-              level: 0,
-            },
-          }),
-
-          new Paragraph({
-            text: "Immediately inform the Club of an accident or illness and not to undergo any medical treatment before the Player has informed the Club´s doctor (except in case of emergencies) and provide a medical certificate in the case of incapacity for work;",
-            bullet: {
-              level: 0,
-            },
-          }),
-
-          new Paragraph({
-            text: "upon disagreeing with the opinion of the Club´s doctor, Player has a right to a second opinion of another independent medical expert. If the opinions of the Club’s doctor and the medical expert differ, the Club and the Player will agree with the opinion of a third independent medical expert, whose opinion will remain binding for the parties;",
-            bullet: {
-              level: 0,
-            },
-          }),
-
-          new Paragraph({
-            text: "Take care of the property of the Club and to return it after termination of the Contract;",
-            bullet: {
-              level: 0,
-            },
-          }),
-
-          new Paragraph({
-            text: "Protect the Club’s reputation in contact with media and football prospects and avoid any declarations which damage the interests of the Club;",
-            bullet: {
-              level: 0,
-            },
-          }),
-
-          new Paragraph({
-            text: "At his initiative and immediately inform the coach or official of the Club of all circumstances which have become known to him and which violate or may significantly violate the interests or reputation of the Club, and immediately notify the coach or official of the Club of all possible circumstances which may influence the preservation and condition of assets handed into the Player’s possession;",
-            bullet: {
-              level: 0,
-            },
-          }),
-
-          new Paragraph({
-            text: "not start transfer negotiations with another football Club without notifying the Club, except if the Contract concluded between the Club and the Player expires within six months;",
-            bullet: {
-              level: 0,
-            },
-          }),
-
-          new Paragraph({
-            text: "not participate in another football Club in any manner (as a Player, consultant, coach, owner etc.) without the written consent of the Club;",
-            bullet: {
-              level: 0,
-            },
-          }),
-
-          new Paragraph({
-            text: "not participate in football organisations forbidden by FIFA and/or UEFA;",
+            text: "Protect the Organization's reputation in contact with media and football prospects and avoid any declarations which damage the interests of the Organization;",
             bullet: {
               level: 0,
             },
